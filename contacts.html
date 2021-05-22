@@ -1,5 +1,19 @@
---- 
+---
 layout: page
 title: "Contacts"
 permalink: /contacts
 ---
+
+<article>
+    <ul>
+        {% for item in site.data.socialmedia %}
+        <li>
+            <a href="{{ item.url }}">
+                <figure>
+                    <img src="{{item.image_path }}" alt="{{ item.title}}" />
+                </figure>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</article>
