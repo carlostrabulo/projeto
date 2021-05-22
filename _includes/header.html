@@ -1,4 +1,12 @@
 <header id="home">
-  <h1>{{ site.title }}</h1>
+    <h1> {{ site.title }} </h1>
 </header>
-<!-- Nav -->
+<nav>
+    <ul>
+        {% for item in site.data.navigation %}
+        <li>
+        <a href="{{ item.link | relative_url }}"> {{ item.name }}</a>
+    </li>
+        {% endfor %}
+    </ul>
+</nav>
