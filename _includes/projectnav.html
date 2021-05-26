@@ -1,7 +1,7 @@
 <nav>
     <ul>
         {% for project in site.projects %}
-        <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a> {{ project.description }}</li>
+        <li><a href="{{ project.url | relative_url }}">{{ project.title }}</a></li>{{ project.description }}
         {% endfor %}
     </ul>
 </nav>
