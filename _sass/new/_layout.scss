@@ -3,7 +3,6 @@
     cursor: help;
 }
 
-
 header {
     background-color: $base-color;
     position: -webkit-sticky;
@@ -130,16 +129,20 @@ h1 {
             line-height: rem;
         }
 
+    }
+
+    p {
+        margin: 2rem 0rem 4rem 0rem;
+    }
+}
+
+.projectnav {
+    a {
         &:hover {
             @include linkstyle();
             animation-duration: 0.3s;
             animation-name: flicker;
         }
-
-    }
-
-    p {
-        margin: 2rem 0rem 4rem 0rem;
     }
 }
 
