@@ -17,10 +17,14 @@ header {
     }
 }
 
-header h1 a:hover {
-    @include linkstyle();
-    animation-duration: 0.3s;
-    animation-name: flicker;
+h1 {
+    a {
+        &:hover {
+            @include linkstyle();
+            animation-duration: 0.3s;
+            animation-name: flicker;
+        }
+    }
 }
 
 .mainnav {
@@ -29,14 +33,10 @@ header h1 a:hover {
 
     ul {
         display: flex;
-        flex-direction: row;  
+        flex-direction: row;
         margin: 0;
         padding: 0;
         list-style: none;
-    }
-
-    li {
-        line-height: 2.3rem;
 
         a {
             text-decoration: none;
@@ -44,16 +44,16 @@ header h1 a:hover {
             font-weight: 300;
             font-size: 1rem;
             margin-right: 5rem;
+            line-height: 2.3rem;
+
+            &:hover {
+                @include linkstyle();
+            }
         }
 
     }
 
 }
-
-.mainnav a:hover {
-    @include linkstyle();
-}
-
 
 .basesection {
     padding: 3rem 2rem 10rem 2rem;
@@ -96,7 +96,6 @@ header h1 a:hover {
     padding: 0;
     display: flex;
 
-
     li {
         margin-top: 2rem;
         margin-right: 5rem;
@@ -123,25 +122,27 @@ header h1 a:hover {
         padding: 0;
         margin-top: 2rem;
 
-    a {
-        text-decoration: none;
-        color: $primary-color;
-        font-weight: 500;
-        font-size: 3rem;
-        line-height: rem;
+        a {
+            text-decoration: none;
+            color: $primary-color;
+            font-weight: 500;
+            font-size: 3rem;
+            line-height: rem;
+        }
+
+        &:hover {
+            @include linkstyle();
+            animation-duration: 0.3s;
+            animation-name: flicker;
+        }
+
     }
-}
 
     p {
         margin: 2rem 0rem 4rem 0rem;
     }
 }
 
-.projectnav a:hover {
-    @include linkstyle();
-    animation-duration: 0.3s;
-    animation-name: flicker;
-}
 
 @keyframes flicker {
     0% {
@@ -173,11 +174,11 @@ header h1 a:hover {
     img {
         max-width: 80vw;
         transition: 2s;
-    }
-}
 
-.projectimage img:hover {
-    opacity: 0%;
+        &:hover {
+            opacity: 0%;
+        }
+    }
 }
 
 footer {
@@ -203,14 +204,13 @@ footer {
 
     .mainnav {
         ul {
-            
-            li {
-                a{
-                    font-size: 1.5rem;  
-                    margin-right: 12rem ;
 
-                }
+            a {
+                font-size: 1.5rem;
+                margin-right: 12rem;
+
             }
+
         }
     }
 
@@ -218,40 +218,53 @@ footer {
         max-width: 50vw;
     }
 
-    .skillslist li figure img {
-        width: 5vw;
+    .skillslist {
+        li {
+            figure {
+                img {
+                    width: 5vw;
+                }
+            }
+        }
     }
 
-    .contactlist li figure img {
-        width: 5vw;
+    .contactlist {
+        li {
+            figure {
+                img {
+                    width: 5vw;
+                }
+            }
+        }
     }
 
-.projectnav {
+    .projectnav {
 
-    max-width: 70%;
+        max-width: 70%;
 
-    ul a {
-        font-size: 4rem;
-        line-height: 4rem;
+        ul {
+            a {
+                font-size: 4rem;
+                line-height: 4rem;
+            }
+        }
+
+        p {
+            margin: 2rem 0rem 4rem 0rem;
+        }
     }
 
-    p {
-        margin: 2rem 0rem 4rem 0rem;
+    .projectimage {
+
+        img {
+            max-width: 50vw;
+        }
     }
-}
 
-.projectimage {
-
-    img {
-        max-width: 50vw;
+    footer {
+        p {
+            font-size: 1rem;
+        }
     }
-}
-
-footer {
-    p{
-        font-size: 1rem;
-    }
-}
-
 
 }
