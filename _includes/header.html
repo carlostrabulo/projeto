@@ -1,5 +1,5 @@
 <header id="home">
-    <h1 class="sitetitle"> {{ site.title }} </h1>
+    <h1 class="sitetitle"> <a href=" {{ "/" | relative_url }}"> {{ site.title }}</a> </h1>
 <nav class="mainnav">
     <ul>
         {% for item in site.data.navigation %}

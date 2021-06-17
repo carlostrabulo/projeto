@@ -1,9 +1,26 @@
+@mixin linkstyle {
+    text-decoration: line-through;
+    cursor: help;
+}
+
+
 header {
     background-color: $base-color;
     position: -webkit-sticky;
     position: sticky;
     top: 0px;
     padding-top: 1rem;
+
+    a {
+        text-decoration: none;
+        color: $primary-color;
+    }
+}
+
+header h1 a:hover {
+    @include linkstyle();
+    animation-duration: 0.3s;
+    animation-name: flicker;
 }
 
 .mainnav {
@@ -12,11 +29,10 @@ header {
 
     ul {
         display: flex;
-        flex-direction: column;
+        flex-direction: row;  
         margin: 0;
         padding: 0;
         list-style: none;
-        font-size: 1.2rem;
     }
 
     li {
@@ -26,7 +42,8 @@ header {
             text-decoration: none;
             color: $primary-color;
             font-weight: 300;
-            margin-right: 12rem;
+            font-size: 1rem;
+            margin-right: 5rem;
         }
 
     }
@@ -34,9 +51,9 @@ header {
 }
 
 .mainnav a:hover {
-    text-decoration: line-through;
-    cursor: help;
+    @include linkstyle();
 }
+
 
 .basesection {
     padding: 3rem 2rem 10rem 2rem;
@@ -121,7 +138,7 @@ header {
 }
 
 .projectnav a:hover {
-    text-decoration: line-through;
+    @include linkstyle();
     animation-duration: 0.3s;
     animation-name: flicker;
 }
@@ -178,7 +195,7 @@ footer {
 
     p {
         margin: 0rem 2rem 0rem 2rem;
-        font-size: 0.5rem;
+        font-size: 0.6rem;
     }
 }
 
@@ -186,8 +203,14 @@ footer {
 
     .mainnav {
         ul {
-            flex-direction: row;
-            font-size: 1.5rem;
+            
+            li {
+                a{
+                    font-size: 1.5rem;  
+                    margin-right: 12rem ;
+
+                }
+            }
         }
     }
 
@@ -221,6 +244,12 @@ footer {
 
     img {
         max-width: 50vw;
+    }
+}
+
+footer {
+    p{
+        font-size: 1rem;
     }
 }
 
