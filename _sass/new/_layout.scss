@@ -28,11 +28,11 @@ h1 {
 
 .mainnav {
     background-color: $secondary-color;
-    padding: 1rem 1rem 1rem 2rem;
+    padding: 1rem 2rem 1rem 2rem;
 
     ul {
         display: flex;
-        flex-direction: row;
+        justify-content: space-between;
         margin: 0;
         padding: 0;
         list-style: none;
@@ -42,7 +42,6 @@ h1 {
             color: $primary-color;
             font-weight: 300;
             font-size: 1rem;
-            margin-right: 5rem;
             line-height: 2.3rem;
 
             &:hover {
@@ -211,7 +210,6 @@ footer {
             a {
                 font-size: 1.5rem;
                 margin-right: 12rem;
-
             }
 
         }
